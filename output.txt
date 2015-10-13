@@ -1,0 +1,84 @@
+
+PLAY [localhost] ************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [localhost]
+
+TASK: [get list of files] ***************************************************** 
+changed: [localhost]
+
+TASK: [debug ] **************************************************************** 
+ok: [localhost] => (item=['file1', u'rotate 4']) => {
+    "item": [
+        "file1",
+        "rotate 4"
+    ],
+    "msg": "file: file1 operation: rotate 4"
+}
+ok: [localhost] => (item=['file1', u'size 100']) => {
+    "item": [
+        "file1",
+        "size 100"
+    ],
+    "msg": "file: file1 operation: size 100"
+}
+ok: [localhost] => (item=['file2', u'rotate 4']) => {
+    "item": [
+        "file2",
+        "rotate 4"
+    ],
+    "msg": "file: file2 operation: rotate 4"
+}
+ok: [localhost] => (item=['file2', u'size 100']) => {
+    "item": [
+        "file2",
+        "size 100"
+    ],
+    "msg": "file: file2 operation: size 100"
+}
+ok: [localhost] => (item=['file3', u'rotate 4']) => {
+    "item": [
+        "file3",
+        "rotate 4"
+    ],
+    "msg": "file: file3 operation: rotate 4"
+}
+ok: [localhost] => (item=['file3', u'size 100']) => {
+    "item": [
+        "file3",
+        "size 100"
+    ],
+    "msg": "file: file3 operation: size 100"
+}
+ok: [localhost] => (item=['file4', u'rotate 4']) => {
+    "item": [
+        "file4",
+        "rotate 4"
+    ],
+    "msg": "file: file4 operation: rotate 4"
+}
+ok: [localhost] => (item=['file4', u'size 100']) => {
+    "item": [
+        "file4",
+        "size 100"
+    ],
+    "msg": "file: file4 operation: size 100"
+}
+ok: [localhost] => (item=['file5', u'rotate 4']) => {
+    "item": [
+        "file5",
+        "rotate 4"
+    ],
+    "msg": "file: file5 operation: rotate 4"
+}
+ok: [localhost] => (item=['file5', u'size 100']) => {
+    "item": [
+        "file5",
+        "size 100"
+    ],
+    "msg": "file: file5 operation: size 100"
+}
+
+PLAY RECAP ******************************************************************** 
+localhost                  : ok=3    changed=1    unreachable=0    failed=0   
+
