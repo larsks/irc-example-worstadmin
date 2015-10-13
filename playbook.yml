@@ -1,0 +1,19 @@
+- hosts: localhost
+  connection: local
+  vars:
+    logrotate:
+      log_num_retentions: 4
+      log_max_size: 100
+  tasks:
+    - name: get list of files
+      shell: |
+        for x in $(seq 1 5); do
+          echo file$x
+        done
+      register: conf_list
+
+    - debug:
+        msg: "file: {{item.0}} operation: {{item.1}}"
+      with_nested:
+        - conf_list.stdout_lines
+        - [ "{{ 'rotate %s'|format(logrotate.log_num_retentions) }}", "{{ 'size %s'|format(logrotate.log_max_size) }}" ]
